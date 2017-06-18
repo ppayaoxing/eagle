@@ -11,6 +11,7 @@ public class NDCUtils {
 		if (StringUtils.isEmpty(value)) {
 			value = generateId();
 		}
+		NDC.clear();
 		NDC.push(value);
 	}
 	public static String push(){
