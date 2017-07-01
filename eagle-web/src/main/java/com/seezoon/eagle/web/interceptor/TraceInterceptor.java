@@ -10,6 +10,11 @@ import org.springframework.web.servlet.ModelAndView;
 import com.seezoon.eagle.core.service.BaseService;
 import com.seezoon.eagle.core.utils.NDCUtils;
 
+/**
+ * 线程计时
+ * @author hdf
+ *
+ */
 public class TraceInterceptor extends BaseService implements HandlerInterceptor {
 	
 	ThreadLocal<StopWatch> threadLocal = new ThreadLocal<>();
