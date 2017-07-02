@@ -16,6 +16,7 @@ public class NDCUtils {
 	}
 	public static String push(){
 		String value = pop();
+		clear();
 		NDC.push(value);
 		return value;
 	}

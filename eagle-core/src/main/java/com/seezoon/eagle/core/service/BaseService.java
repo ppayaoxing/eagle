@@ -8,5 +8,5 @@ public class BaseService {
 	/**
 	 * 日志对象
 	 */
-	protected Logger logger = LoggerFactory.getLogger(getClass());
+	protected  Logger logger = LoggerFactory.getLogger(getClass());
 }
