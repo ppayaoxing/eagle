@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
+
 public class MainLauncher {
 	/**
 	 * 日志对象
@@ -13,7 +14,10 @@ public class MainLauncher {
 	protected  static Logger logger = LoggerFactory.getLogger(MainLauncher.class);
 	
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("classpath*:spring-context*.xml");
+		// 加载当前路径下和lib/jar
+		ApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"classpath*:spring-context.xml",
+				"classpath*:lib/*.jar!/spring-context.xml"});
+		
 		//kill pid 执行
 		Runtime.getRuntime().addShutdownHook(new Thread(){
 			@Override
